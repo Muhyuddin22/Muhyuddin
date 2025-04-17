@@ -1,0 +1,87 @@
+.containerlogin 
+{
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0 , 0 ,1);
+    width: 400px;
+    text-align: center;
+    margin-right: 30%;
+}
+.containerlogin h2
+{
+    margin-bottom: 20px;
+    color: #1690a5;
+}
+.form-group 
+{
+    margin-bottom: 15px;
+    text-align: right;
+}
+.form-group label
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1690a5;
+}
+.material-icons 
+{
+    margin-right: 5px;
+    color: #00509e;
+}
+.form-group input{
+    width: 95%;
+    padding: 10px;
+    border: 1px solid rgb(6, 96, 156);
+    border-radius: 4px;
+    margin-top: 5px;
+    color: #333;
+    font-size: large;
+}
+.form-group select {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid rgb(6, 96, 156);
+    border-radius: 4px;
+    margin-top: 5px;
+    color: #333;
+    font-size: large;
+    background-color: #1690a5;
+}
+.password-group 
+{
+    position: relative;
+}
+.toggle-password 
+{
+    position: absolute;
+    left: 20px;
+    top: 43px;
+    cursor: pointer;
+}
+.form-group button 
+{
+    width: 95%;
+    padding: 10px;
+    background-color:#1690a5;
+    color: #fff;
+    border: 1px solid rgb(6, 96, 156);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: large;
+}
+.form-group button:hover 
+{
+    background-color: #079eea;
+}
+.form-group p {
+    color: black;
+}
+.form-group a {
+    color: blue;
+}
+.form-group a:hover{
+    color: #079eea;
+}
