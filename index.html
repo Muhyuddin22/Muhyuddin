@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الموقع الرئيسي</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <!-- الرأس -->
+    <header>
+        <div class="logo">
+            <h1>أكاديمية الدرغام</h1>
+                <p>نحو مستقبل تعليمي أفضل  ،،،، محي الدين نعمان أحمد عبدالحميد الدرغامي "نظم معلومات"</p>
+        </div>
+        <button class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+    
+    <!-- القائمة الجانبية -->
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeBtn">
+            <i class="fas fa-times"></i>
+        </button>
+        <a class="nav-link" data-page="home">الرئيسية</a>
+        <a class="nav-link" data-page="courses">الكورسات</a>
+        <a class="nav-link" data-page="about">من نحن</a>
+        <a class="nav-link" data-page="services">الخدمات</a>
+        <a class="nav-link" data-page="login">تسجيل الدخول</a>
+        <a class="nav-link" data-page="contact">اتصل بنا</a>
+    </div>
+    
+    <!-- طبقة التعتيم -->
+    <div class="body-overlay" id="overlay"></div>
+    
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <!-- الصفحة الرئيسية -->
+        <div id="home-page" class="page active">
+            <div class="home-content">
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h2>التعلم في أي وقت، من أي مكان</h2>
+                        <p>انضم إلى آلاف الطلاب الذين يطورون مهاراتهم مع أكاديمية التعلم عن بعد</p>
+                        <i class="btn btn-primary"><a class="nav-link" data-page="login">سجل الآن مجانًا</a></i>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/hero-image.png" alt="التعلم عن بعد">
+                    </div>
+                </div>
+            </section>
+        
+            <section class="features">
+                <div class="container">
+                    <h2 class="section-title">لماذا تختار أكاديميتنا؟</h2>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-laptop"></i>
+                            <h3>تعلم مرن</h3>
+                            <p>ادرس في الوقت الذي يناسبك ومن المكان الذي تريده</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>مدربون خبراء</h3>
+                            <p>تعلم من أفضل المدربين المعتمدين في مجالاتهم</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <h3>شهادات معتمدة</h3>
+                            <p>احصل على شهادات معتمدة بعد إتمام كل كورس</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="popular-courses">
+                <div class="container">
+                    <h2 class="section-title">الكورسات الشائعة</h2>
+                    <div class="courses-grid">
+                        <!-- سيتم ملؤها بالكورسات عبر JavaScript -->
+                    </div>
+                    <i class="btn"><a class="nav-link" data-page="courses">عرض جميع الكورسات</a></i>
+                </div>
+            </section>
+            </div>
+        </div>
+        
+         <!-- صفحة جميع الكورسات -->
+        <div id="courses-page" class="page">
+            <div class="courses-content">
+                <div class="courses-page">
+                    <div class="container">
+                        <h1 class="section-title">جميع الكورسات</h1>
+                        
+                        <div class="course-filters">
+                            <div class="filter-group">
+                                <label for="category">التصنيف:</label>
+                                <select id="category">
+                                    <option value="all">الكل</option>
+                                    <option value="programming">برمجة</option>
+                                    <option value="design">تصميم</option>
+                                    <option value="marketing">تسويق</option>
+                                    <option value="business">أعمال</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label for="sort">ترتيب حسب:</label>
+                                <select id="sort">
+                                    <option value="popular">الأكثر شيوعًا</option>
+                                    <option value="newest">الأحدث</option>
+                                    <option value="price-low">السعر (منخفض إلى عالي)</option>
+                                    <option value="price-high">السعر (عالي إلى منخفض)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <input type="text" id="search" placeholder="ابحث عن كورس...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="courses-gridAll">
+                            <!-- سيتم ملؤها بالكورسات عبر JavaScript -->
+                        </div>
+                        
+                        <div class="pagination">
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#"><i class="fas fa-angle-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- صفحة من نحن -->
+        <div id="about-page" class="page">
+            <div class="about-content">
+                <div class="another">
+                    <h2>من نحن</h2>
+                <p>نحن أكادمية رائدة في مجال التكنولوجيا والبرمجيات، نعمل منذ أكثر من 3 سنوات في السوق.</p>
+                <p>هدفنا تقديم حلول مبتكرة وعالية الجودة لعملائنا في مختلف المجالات.</p>
+                <p>فريقنا يتكون من مجموعة من المهندسين والمبرمجين ذوي الخبرة العالية.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحة الخدمات -->
+        <div id="services-page" class="page">
+            <div class="services-content">
+                <div class="another">
+                    <h2>الخدمات التي نقدمها</h2>
+                <p>نقدم مجموعة متنوعة من الخدمات التي تلبي احتياجات عملائنا:</p>
+                <per>
+                    <p>تطوير تطبيقات الويب</p>    
+                    <p>تصميم المواقع الإلكترونية</p>
+                    <p> تطبيقات الهاتف المحمول </p>
+                    <p>حلول التجارة الإلكترونية</p>
+                    <p>استضافة المواقع والسيرفرات </p>
+                </per>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحة تسجيل الدخول -->
+        <div id="login-page" class="page">
+            <form id="loginForm">
+                <div class="containerlogin">
+                    <h2>تسجيل الدخول</h2>
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="role"><i class="material-icons"></i>الدخول كـ:</label>
+                            <select id="role" name="role" required>
+                                <option value="student">طالب</option>
+                                <option value="teacher">معلم</option>
+                                <option value="manager">مدير</option>
+                            </select>
+                            <br>
+                            <br>
+                            <label for="email"><i class="material-icons"></i>البريد الإلكتروني:</label>
+                            <input type="email" id="email" name="email" required>
+                            <br>
+                            <br>
+                            <div class="form-group password-group">
+                             <label for="password"><i class="material-icons"></i>كلمة السر:</label>
+                             <input type="password" id="password" name="password" required>
+                                <br>
+                                <br>
+                             <button type="submit" name="login">تسجيل الدخول</button>
+                             <br><br>
+                                <p>ليس لديك حساب؟ <a class="nav-link" data-page="createstud">أنشئ حساب جديد</a></p>
+                                <p><a href="#">نسيت كلمة المرور؟</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+        
+         <!-- صفحة تسجيل حساب جديد -->
+         <div id="createstud-page" class="page">
+            <div class="createstud-content">
+                <div class="containerlogin">
+                    <h2> نموذج التسجيل </h2>
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="name">الاسم كامل:</label>
+                            <input type="text" id="name" name="name" required>
+                        
+                            <label for="email">البريد الإلكتروني:</label>
+                            <input type="email" id="email" name="email" required>
+                     
+                            <label for="password">كلمة المرور:</label>
+                            <input type="password" id="password" name="password" required>
+                        
+                            <label for="password">تأكيد كلمة المرور:</label>
+                            <input type="password" id="password" name="password" required>
+                        
+                            <label for="phone">رقم الهاتف:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <br>
+                            <br>
+                            <button type="submit" name="next">تسجيل الحساب</button>
+                            <br><br>
+                            <p>لديك حساب بالفعل؟ <a class="nav-link" data-page="login">سجل الدخول الآن</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- صفحة اتصل بنا -->
+        <div id="contact-page" class="page">
+            <div class="contact-content">
+             <div class="another">
+                <h2>اتصل بنا</h2>
+                <p>يمكنك التواصل معنا عبر الوسائل التالية:</p>
+                <p><strong>البريد الإلكتروني:</strong><span>✉️</span><a href="mailto:muhyuddinaldergham@gmail.com">muhyuddinaldergham@gmail.com</a></p>
+                <p><strong>الهاتف:</strong> <span>📞</span><a href="tel:+967774794039">+967774794039</a></p>
+                <p><strong>العنوان:</strong> اليمن - مأرب</p>
+                <p>ساعات العمل: من الأحد إلى الخميس، من 8 صباحاً إلى 5 مساءً</p>
+             </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h5>عن الأكاديمية</h5>
+                    <p>أكاديمية رائدة في التعليم عن بعد تقدم تجربة تعليمية متميزة عبر منصاتها الإلكترونية المتطورة.</p>
+                    <p>أكاديمية الدرغام تهدف إلى تقديم تعليم عالي الجودة عبر الإنترنت للجميع.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>روابط سريعة</h5>
+                    <ul class="footer-links" id="footer-links">
+                        <li> <a class="nav-link" data-page="home">الرئيسية</a></li>
+                        <li> <a class="nav-link" data-page="courses">الكورسات</a></li>
+                        <li> <a class="nav-link" data-page="login">تسجيل الدخول</a></li>
+                        <li> <a class="nav-link" data-page="services">الخدمات</a></li>
+                        <li> <a class="nav-link" data-page="about">من نحن</a></li>
+                        <li><a class="nav-link" data-page="contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>تواصل معنا</h5>
+                    <ul class="footer-contact">
+                        <li><span>📞</span><a href="tel:+967774794039">+967774794039</a></li>
+                        <li><span>✉️</span><a href="mailto:muhyuddinaldergham@gmail.com">muhyuddinaldergham@gmail.com</a></li>
+                        <li><span>📍</span> اليمن ، مأرب</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p> أكاديمية الدرغام جميع الحقوق محفوظة. <i>2025</i> ©</p>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
