@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #1690a5; 
+    background: -webkit-linear-gradient(to bottom, #9575cd, #1690a5, #311b92);
+    background: linear-gradient(to bottom, #9575cd, #1690a5, #311b92); 
+    transition: margin-right 0.5s;
+}
+
+/* التصميم للغة العربية */
+body[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* الرأس */
+header {
+    background-color: #0c3249;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.logo h1 {
+    color:#0895f3;
+    font-size: 2.5rem;
+}
+
+.logo p {
+    color:#86b3df;
+    font-size: 1.5rem;
+}
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+.menu-btn ::before {
+    content: "≡";
+    font-family: Arial;
+    display: inline-block;
+}
+.close-btn ::before {
+    content: "×";
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+}
+/* القائمة الجانبية */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: #0c3249;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    width: 250px;
+    right: 0;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidebar a:hover {
+    background-color: #3f78b0;
+    color: white;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* المحتوى الرئيسي */
+main {
+    padding: 2rem;
+    padding-top: 120px;
+    min-height: calc(100vh - 120px);
+}
+
+.page {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+.page.active {
+    display: block;
+}
+.iframe-login {
+    background: white;
+    margin-top: 2%;
+    margin-right: 30%;
+    width: 500px;
+    height: 630px;
+    min-height: calc(100vh - 120px);
+}
+/* تأثيرات */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* التذييل */
+.footer {
+    background-color: #2c3e50;
+    color:#ffffff;
+    padding: 3rem 0 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+a:hover {
+    color: #3498db;
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer h5 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-links li {
+    margin-bottom:0.5rem;
+}
+
+.footer-links a {
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+    padding-right: 5px;
+}
+
+.footer-contact li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact i {
+    margin-left:0.5rem;
+    width: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* أيقونات محلية */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+/* تأثير عند فتح القائمة */
+.body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.body-overlay.active {
+    display: block;
+}
